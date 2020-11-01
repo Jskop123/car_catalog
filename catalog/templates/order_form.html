@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<div class="container_tab">
+    <h1>Złóż zamówienie</h1>
+    <ul>
+    {%for car in cars %}
+        <div class="cart-row">
+        <img class="cart-img" alt="Główna fota samochodu"
+        src="{{ car.image1.url }}" alt="car samochod" />
+        <div class="cart-cars-description" style="margin-right: 500px;">
+          <h2>{{ car.name }}</h2>
+          <p class="cart-text-description">{{ car.description }}</p>  
+        </div>
+      </div>
+    {%endfor%}
+    </ul>
+    <form class="needs-validation order-form" novalidate="" action="/order/" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input class="btn btn-info" type="submit" value="Złóż zamówienie">
+    </form>
+</div>
+
+
+{% endblock %}

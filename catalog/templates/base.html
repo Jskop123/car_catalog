@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../static/catalog/style/style.css" />
+  <link rel="stylesheet" href="../static/catalog/style/base.css" />
+  <link rel="stylesheet" href="../static/catalog/style/car_details.css" />
+  <link rel="stylesheet" href="../static/catalog/style/index.css" />
+  <link rel="stylesheet" href="../static/catalog/style/cart.css" />
+  <link rel="stylesheet" href="../static/catalog/style/contact.css" />
+  <link rel="stylesheet" href="../static/catalog/style/cars.css" />
+  <link rel="stylesheet" href="../static/catalog/style/order_form.css" />
+
+  <title>Katalog pojazdów</title>
+</head>
+<body>
+  <nav>
+    <span id="logo">
+      <a href="/"><img src="{% static './catalog/img/logo.png' %}" alt="Logo" /></a>
+    </span>
+
+    <ul id="left-side-menu">
+      <li><a href="/">O NAS</a></li>
+      <li><a href="/samochody/">SAMOCHODY</a></li>
+      <li><a href="/zamawiane/">REZERWACJE</a></li>
+      <li><a href="/kontakt">KONTAKT</a></li>
+    </ul>
+
+    <span id="logo-title">
+      <a href="/"><h1>KATALOG POJAZDÓW</h1></a>
+    </span>
+
+    <ul id="right-side-icons">
+      <li>
+        <a href="#">
+          <img class="phone" src="{% static './catalog/img/icons/call.svg' %}"/>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img class="email" src="{% static './catalog/img/icons/email.svg' %}"/>
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://www.facebook.com/">
+          <img class="facebook" src="{% static './catalog/img/icons/facebook.svg' %}"/>
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://www.instagram.com/katalogpojazdow/">
+          <img class="instagram" src="{% static './catalog/img/icons/instagram.svg' %}"/>
+      </a>
+    </li>
+    </ul>
+
+  </nav>
+
+  {% block page_content %}
+  {% endblock %}
+  <!-- Footer -->
+<footer class="page-footer font-small mdb-color pt-4" style="background-color: #E9ECEF;">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Footer links -->
+    <div class="row text-center text-md-left mt-3 pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">Katalog pojazdów</h6>
+        <p>Opis sklepu edytowalny</p>
+      </div>
+      <!-- Grid column -->
+
+      <hr class="w-100 clearfix d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">MENU</h6>
+        <p>
+          <a href="/">O nas</a>
+        </p>
+        <p>
+          <a href="/samochody/">Samochody</a>
+        </p>
+        <p>
+          <a href="/rezerwacje/">Rezerwacje</a>
+        </p>
+        <p>
+          <a href="/kontakt/">Kontakt</a>
+        </p>
+      </div>
+      <!-- Grid column -->
+
+      <hr class="w-100 clearfix d-md-none">
+
+
+      <!-- Grid column -->
+      <hr class="w-100 clearfix d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">Kontakt</h6>
+        <p>
+          <i class="fas fa-home mr-3"></i> Adres</p>
+        <p>
+          <i class="fas fa-envelope mr-3"></i> mail@</p>
+        <p>
+          <i class="fas fa-phone mr-3"></i> 0123456788</p>
+      </div>
+    </div>
+    </div>
+  </div>
+  <!--
+    Icons made by <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+    Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+    https://www.flaticon.com/free-icon/instagram_1384031?fbclid=IwAR3qJxZWOJNDy43lWNQJjJp_d2glf84ZmQxXQeZ_EAuzU39eBOwpKO2p1VI
+    Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+    Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+    Icons made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+    Icons made by <a href="https://www.flaticon.com/authors/surang" title="surang">surang</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+    Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+  -->
+</footer>
+<!-- Footer -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

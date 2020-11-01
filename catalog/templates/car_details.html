@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<div class="imageBox">
+  <div class="image-slider">
+    <img class="carImg" src="{{ car.image1.url }}" alt="Car image">
+    <span id="arrow-left">&#8249;</span>
+    <span id="arrow-right">&#8250;</span>
+  </div>
+
+  <div class="car_details">
+    <h3 class="title" style="font-weight: 700;">{{ car.name }}</h3>
+    <p>{{ car.description }}</p>
+    <ul>
+      <li>
+        <img class="icon" src="{% static './catalog/img/icons/color-palette.svg' %}" />
+        Kolor: 
+        <span style="font-weight: bold;">
+          {{ car.color }}
+        </span>
+        </li>
+      <li>
+        <img class="icon" src="{% static './catalog/img/icons/calendar.svg' %}" />
+        Rok: 
+        <span style="font-weight: bold;">
+          {{ car.rok }}
+        </span>
+      </li>
+      <li>
+        <img class="icon" src="{% static './catalog/img/icons/intellectual-property.svg' %}" />
+        Stan:
+        <span style="font-weight: bold;">
+          {{ car.stan }}
+        </span>
+      </li>
+      <li>
+        <div class="boxButtons">
+          <form action="/zamawiane/add" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="item_id" value="{{ car.id }}" />
+            <input class="btn btn-dark" type="submit" value="Dodaj" />
+          </form>
+          <a class="btn btn-light" href="javascript:history.back()">Wróć</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<a class="closeDesc" href="javascript:history.back()"><img src="{% static './catalog/img/icons/close.svg' %}"/></a>
+
+
+<script src="../static/catalog/script/cars.js"></script>
+{% endblock %}

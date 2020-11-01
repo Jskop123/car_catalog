@@ -1,0 +1,93 @@
+nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  background-color: white; 
+  border-bottom: 2px solid #E9ECEF;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  justify-content: space-evenly;
+  opacity: .9;
+  z-index: 10000000000000000000000000;
+}
+
+#logo img {
+  width: 50px; 
+  height: 50px;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  transition: .8s;
+}
+
+#logo img:hover {
+  transform: rotate(360deg);
+  cursor: pointer;
+}
+
+#left-side-menu {
+  width: 33.3%;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+#left-side-menu li {
+  transform: translateY(30%);
+  margin: 0 2%;
+}
+#left-side-menu li a{
+  color: #000;
+  font-size: 0.8em;
+  text-decoration: none;
+}
+#left-side-menu li a:hover {
+  display: inline-block;
+  transform: scale(1, -1);
+  border-top: 1px solid black;
+}
+
+#logo-title {
+  
+  transform: translateY(10%);
+  text-align: center;
+}
+
+#logo-title a {
+  color: #000;
+  text-decoration: none;
+}
+#logo-title a h1 {
+  font-size: 1.8em;
+}
+
+#right-side-icons {
+  width: 33.3%;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  transform: translateY(25%);
+}
+
+#right-side-icons li a img {
+  width: 25px;
+  height: 25px;
+  transition: .3s;
+}
+
+/*
+Icons
+*/
+.phone:hover{
+  transform: rotate(20deg);
+}
+.email:hover{
+  transform: translateY(-5px);
+}
+.facebook:hover{
+  transform: rotate(-10deg);
+}
+.instagram:hover{
+  transform: translateY(5px);
+}
+

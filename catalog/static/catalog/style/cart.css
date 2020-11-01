@@ -1,0 +1,56 @@
+.reservation_container {
+  width: 80%;
+  display: block;
+  margin: 5% auto;
+}
+
+.reservation_container p {
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+#reservation_choose {
+  font-weight: 700;
+}
+
+#reservation_choose_cars {
+  width: 80%;
+  display: block;
+  margin: 5% auto;
+  font-family: 'Libre Caslon Text', serif;
+}
+.reservation_buttons_section {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10% 0 5% ;
+}
+
+.cart-img {
+  width: 200px;
+  height: 200px;
+  margin: 1%;
+}
+
+.cart-row {
+  width: 70%;
+  margin: 2% auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+}
+
+.cart-cars-description {
+  width: 200px;
+  margin-right: 100px;
+}
+.delete-product-from-cart {
+  font-size: 56px;
+  text-align: center;
+  color: red;
+  transition: .2s;
+  margin-right: 20px;
+}
+.delete-product-from-cart:hover {
+  transform: scale(.95, .95);
+}

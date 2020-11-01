@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block page_content %}
+
+<div class="container_tab">
+    <h1>Samochody</h1>
+    <p>Dopasuj samochody do swoich potrzeb:</p>
+    <div class="sort_board">
+      <a href="/samochody/">
+        <button type="button" style="border: 1px solid black" class="btn btn-light">WSZYTSKIE</button>
+      </a>
+      <a href="/samochody/najstarsze">
+        <button type="button" style="border: 1px solid black" class="btn btn-light">NAJSTARSZE</button>
+      </a>
+      <a href="/samochody/najmlodsze">
+        <button type="button" style="border: 1px solid black" class="btn btn-light">NAJMŁODSZE</button>
+      </a>
+      <a href="/samochody/jezdzace">
+        <button type="button" class="btn btn-dark">JEŻDZĄCE</button>
+      </a>
+      <a href="/samochody/stojace">
+        <button type="button" class="btn btn-dark">STOJĄCE</button>
+      </a>
+      <a href="/samochody/zkierowca">
+        <button type="button" class="btn btn-dark">Z KIEROWCA</button>
+      </a>
+    </div>
+  </div>
+
+    <div id="center-cars">
+      <div class="cars-container">
+      {% for car in cars %}
+        <div class="car-card">
+          <a href="/samochod/{{ car.id }}">
+            <img class="main-car-img" alt="Główna fota samochodu"
+              src="{{ car.image1.url }}"
+              alt="car samochod" />
+          </a>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+
+{% endblock %}

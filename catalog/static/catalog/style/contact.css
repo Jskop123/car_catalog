@@ -1,0 +1,22 @@
+.contact_img {
+  width: 25px;
+  transition: .3s;
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+.contact_map {
+  display: block;
+  margin: 5% auto;
+}
+.contact {
+  list-style: none;
+  margin: 5% 0;
+}
+.contact li {
+  margin: 30px;
+}
+.contact a {
+  color: black;
+  font-weight: 700;
+  font-size: 1em;
+}

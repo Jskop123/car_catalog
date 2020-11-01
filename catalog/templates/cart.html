@@ -1,0 +1,59 @@
+
+
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+
+<div class="container_tab">
+  <div class="">
+    <h1>Rezerwacja</h1>
+
+    <p>Rezerwacja pojazdów odbywa się u Nas przez formularz kontaktowy, sprawdzamy dostępność wybranego auta w określonym terminie, następnie potwierdzamy wszystkie szczegóły wynajmu i podstawiamy samochód pod wybraną wcześniej lokalizację. Koszt dojazdu to XX/km</p>
+    <ul>
+      <p id="reservation_choose">Istnieją  trzy rodzaje wynajmu samochodów : </p>
+      <li>Stojący ( element scenografii, czyli taki pojazd którym nie wolno się poruszać) </li>
+      <li>Jeżdżący  ( pojazd którym możemy się poruszać z limitem kilometrów, opisanym przy każdym pojedzcie )</li>
+      <li>Jedzący z kierowcą (pojazd którym można się poruszać wraz z wyznaczony przez nas kierowca )</li>
+    </ul>
+
+    </div>
+  </div>
+
+{% if cars %}
+
+<h1 id="reservation_choose_cars">Samochody wybrane do zamówienia</h1>
+<div class="container">
+    {% for car in cars %}
+      <div class="cart-row">
+        <img class="cart-img" alt="Główna fota samochodu"
+        src="{{ car.image1.url }}" alt="car samochod" />
+        <div class="cart-cars-description">
+          <h2>{{ car.name }}</h2>
+          <p class="cart-text-description">{{ car.description }}</p>  
+        </div>
+        <form action="/zamawiane/remove" method="POST">
+          {% csrf_token %}
+          <input type="hidden" name="item_id" value="{{ car.id }}" />
+          <input class="btn delete-product-from-cart" type="submit" value="&#215;" />
+        </form>
+      </div>
+    {% endfor %}
+</div>
+<div class="reservation_buttons_section">
+  <form action="/order/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input class="btn btn-success" type="submit" value="Złóż zamówienie">
+  </form>
+  <a class="btn btn-info" href="/samochody">Wróć do samochodów</a>
+  <form action="/clean_card/" method="post">
+    {% csrf_token %}
+    <input class="btn btn-danger" type="submit" value="Usuń wszystko z kosza" />
+  </form>
+</div>
+
+
+{% endif %}
+
+{% endblock %}
+

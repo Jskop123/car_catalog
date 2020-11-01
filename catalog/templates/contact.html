@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block page_content %}
+<div>
+{% for contact in contacts %}
+<div class="container_tab">
+  <h1>Kontakt</h1>
+  <p>{{ contact.paragraph }}</p>
+  <ul class="contact">
+    <li>
+      <a href="#">
+        <img class="contact_img email" src="../static/catalog/img/icons/email.svg" />
+        {{ contact.adres }}
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img class="contact_img email" src="../static/catalog/img/icons/email.svg" />
+        {{ contact.email }}
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img class="contact_img phone" src="../static/catalog/img/icons/call.svg" />
+        {{ contact.phone }}
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="container_tab">
+  <h1>Mapa pojazdów</h1>
+  <img class="contact_map" src="../static/catalog/img/mapa.png" />
+</div>
+</div>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block page_content %}
+<div class="container_tab">
+  {% for id in index %}
+  <h1>{{ id.title }}</h1>
+  <p class="lead">{{ id.description1 }}</p>
+  <p class="lead">{{ id.description2 }}</p>
+  <p class="lead">{{ id.description3 }}</p>
+  <p class="lead">{{ id.description4 }}</p>
+  <p class="lead">{{ id.description5 }}</p>
+  <p class="lead">{{ id.description6 }}</p>
+  <p class="lead">{{ id.description7 }}</p>
+  <p class="lead">{{ id.description8 }}</p>
+  <p class="lead">{{ id.description9 }}</p>
+  <p class="lead">{{ id.description10 }}</p>
+  {% endfor %}
+  <hr class="my-4">
+  <p>Zapraszamy do sprawdzenia naszej oferty...</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="/samochody/" role="button">Samochody</a>
+  </p>
+</div>
+{% endblock %}
+
+
+<!--
+
+  Przedziały 10 lat
+  Podział na kolory
+  Kraj pochodzenia
+  stan: Jeżdzący, stojący, z kierownca (pusty bez stanu w opisie)
+
+-->
